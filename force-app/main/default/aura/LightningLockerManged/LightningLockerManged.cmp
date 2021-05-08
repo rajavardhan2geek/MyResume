@@ -1,0 +1,12 @@
+<aura:component  >
+	<div>
+    
+    <div>
+        
+    <p> this is managed package .Please check component html from unmanaged package of another org</p>
+        <lightning:button label='readdata' onclick='{!c.readdata}' />
+       <p class='displaydata' style='display:none'> Please find inner html from other org</p> 
+    </div>
+    
+    </div>
+</aura:component>

@@ -1,0 +1,54 @@
+<aura:component access='global' extends="forceCommunity:navigationMenuBase" implements="forceCommunity:themeLayout,forceCommunity:availableForAllPageTypes">
+    <ltng:require styles="/resource/BootStrap45" scripts="/resource/bootstrapjqueryjs,/resource/BootStrap45"/>    
+
+    <aura:attribute name="menuItems" type="Object[]" />
+    <!--nav role="navigation" class="slds-is-relative tds-color_white">
+           
+        <ul class="slds-grid">
+        <aura:iteration items="{!v.menuItems}" var="item" >
+           
+         
+            <lightning:button variant="base"  label="{!item.label}"  onclick='{!c.navigateToUrl}' class="slds-p-horizontal_small slds-p-vertical_x-small slds-m-horizontal_xxx-small"></lightning:button>
+               
+                <lightning:menuItem value="{!item.id}" label="{!item.label}" />
+            
+                <aura:if isTrue="{!item.subMenu}">
+                   
+        <lightning:buttonMenu alternativeText="Show menu" onselect='{!c.navigateToUrl}'>
+                    
+                    <aura:iteration items="{!item.subMenu}" var="subItem">
+                        <lightning:menuItem value="{!subItem.label}" label="{!subItem.label}" />
+                    <a data-menu-item-id="{!subItem.id}" onclick="{!c.onClick}" class='slds-p-horizontal_small slds-p-vertical_x-small slds-m-horizontal_xxx-small slds-show_inline-block tds-color_black tds-desktop-nav__item tds-desktop-nav__item_link active css-1pg959d' href="">{!subItem.label}</a>
+                     
+                        
+                    </aura:iteration>
+                    </lightning:buttonMenu>
+                  
+                </aura:if> 
+            
+        
+        </aura:iteration>
+       </ul>
+    </nav-->
+    <aura:attribute name="navBar" type="Aura.Component[]"/>
+    <aura:attribute name="search" type="Aura.Component[]"/>
+    <aura:attribute name="sidebarFooter" type="Aura.Component[]"/>
+    <div class="slds-grid slds-grid_vertical slds-grid--align-center">
+        <div class="slds-col">
+            <div class="slds-grid">
+                <div class="slds-col">
+                <!-- placeholder for logo -->
+                </div>
+               
+                <div class="slds-col" style='width:100%'>   
+                <!-- placeholder for navigation -->   
+                {!v.navBar}                   
+                </div>
+               
+            </div>
+        </div>
+        <div class="slds-col content">
+            {!v.body}
+        </div>
+    </div>
+</aura:component>

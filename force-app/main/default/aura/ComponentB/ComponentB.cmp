@@ -1,0 +1,8 @@
+<aura:component >
+<aura:handler action="{!c.handleeventhandler}" name="bubbleEvent" event="c:ComponentEventRootApp"  phase='capture' />
+<aura:handler action="{!c.handleAppeventCMP}" event="c:Applicationevnt"  phase='capture' />
+<aura:attribute name="parentB" type="String" description="attribute A" />
+ <P> {!v.parentB}</P>	
+<lightning:button name='buttonB'  label='Component B' />
+<c:ComponentC />
+</aura:component>

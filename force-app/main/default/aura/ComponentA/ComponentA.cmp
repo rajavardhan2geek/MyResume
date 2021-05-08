@@ -1,0 +1,20 @@
+<aura:component >
+<aura:handler action="{!c.handleevent}" name="bubbleEvent" event="c:ComponentEventRootApp"  phase='capture' />
+<aura:handler action="{!c.handleAppevent}"  event="c:Applicationevnt"  phase='capture' />
+<aura:attribute name="parentA" type="String" description="attribute A" />
+
+<div class="slds-grid" style="border:solid 2px " >
+<div class='slds-col  slds-p-horizontal_medium' >
+<span><p>{!v.parentA}</p>
+<lightning:button name='buttonA' label='Component A'/></span>
+</div>
+<div class='slds-col  slds-p-horizontal_medium'>
+<span><c:ComponentB /> </span>
+</div>
+
+</div>
+
+
+	
+
+</aura:component>

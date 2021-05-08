@@ -1,0 +1,144 @@
+<template>
+  <div class="slds-grid slds-gutters">
+    <div class="slds-col">
+     <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-border_left slds-border_right">
+        <thead>
+        <tr class="slds-line-height_reset">
+         <th class="" scope="col">
+          <div class="slds-truncate" title="State/UT">Active Cases</div>
+         </th>
+         <th class="" scope="col">
+            <div class="slds-truncate" title="State/UT">Recovered Cases</div>
+           </th>
+           <th class="" scope="col">
+            <div class="slds-truncate" title="State/UT">Confirmed Cases</div>
+           </th>
+           <th class="" scope="col">
+            <div class="slds-truncate" title="State/UT">Deaths</div>
+           </th>
+           <th class="" scope="col">
+            <div class="slds-truncate" title="State/UT">Last Updated Time</div>
+           </th>
+        </tr>
+        </thead>
+        <tbody>
+     <template for:each={totalcases} for:item='total'>
+        <tr class='slds-hint-parent' key={total.state}>
+          
+                 <td data-label="active">
+                     <div class="slds-truncate" title={total.active}>{total.active}
+
+                        <span class='deltaconfirmed'> +({total.deltaconfirmed})</span>
+                     </div>
+                </td>
+                
+               <td data-label="recovered">
+                 <div class="slds-truncate" title={total.recovered}>{total.recovered}
+                    <span class='deltarecovered'>  -({total.deltarecovered})</span>
+                 </div>
+               </td>
+               <td data-label="confirmed">
+                <div class="slds-truncate" title={total.confirmed}>{total.confirmed} </div>
+              </td>
+               <td data-label="deaths">
+                <div class="slds-truncate" title={total.deaths}>{total.deaths}
+
+                  <span class='deltaconfirmed'>  ({total.deltadeaths})</span>
+                </div>
+              </td>
+               <td data-label="lastupdatedtime">
+                <div class="slds-truncate" title={total.lastupdatedtime}>{total.lastupdatedtime}</div>
+              </td>
+               </tr>
+        </template>
+    </tbody>
+    </table>
+
+  </div>
+  </div>
+  <br/>
+  <br/>
+<div class='slds-grid slds-grid_vertical-align-start'>
+  <div class='slds-col'>
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-border_left slds-border_right">
+    <thead>
+    <tr class="slds-line-height_reset">
+    <th>
+    <div class="slds-truncate" title="State/UT">State/UT</div>
+    </th>
+    <th class="" scope="col">
+    <div class="slds-truncate" title="Active">Active</div>
+    </th>
+    <th class="" scope="col">
+    <div class="slds-truncate" title="Confirmed">Confirmed</div>
+    </th>
+    <th class="" scope="col">
+    <div class="slds-truncate" title="Recovered">Recovered</div>
+    </th>
+    <th class="" scope="col">
+    <div class="slds-truncate" title="Deaths">Deaths</div>
+    </th>
+    <th class="" scope="col">
+    <div class="slds-truncate" title="LastUpdatedDate">Last Updated Date</div>
+    </th>
+    </tr>
+    </thead>
+    <tbody>
+    <template for:each={data} for:item='statedate'>
+        <tr class='slds-hint-parent' key={statedate.state} >
+           <td>
+                <div class="slds-truncate" title={statedate.state}>
+                <a name={statedate.state} onclick={searchDistricts} tabindex="-1">{statedate.state}</a>
+                </div>
+                 </td>
+                <td data-label="active">
+                    <div class="slds-truncate" title={statedate.active}>{statedate.active}
+
+                        <span class='deltaconfirmed'> + ({statedate.deltaconfirmed})</span>
+                    </div>
+               </td>
+               <td data-label="confirmed">
+                <div class="slds-truncate" title={statedate.confirmed}>{statedate.confirmed}
+                        
+
+                </div>
+              </td>
+              <td data-label="deltarecovered">
+                <div class="slds-truncate" title={statedate.recovered}>{statedate.recovered}
+
+                    <span class='deltarecovered'> - ({statedate.deltarecovered})</span>
+                </div>
+              </td>
+              <td data-label="deaths">
+                <div class="slds-truncate" title={statedate.deaths}>{statedate.deaths}
+
+                  <span class='deltaconfirmed'>  ({statedate.deltadeaths})</span>
+
+                  
+                </div>
+              </td>
+              <td data-label="lastupdatedtime">
+                <!--lightning-formatted-date-time
+                value={statedate.lastupdateddate} year="numeric"
+                day="2-digit"
+                month="2-digit" hour="2-digit"
+                minute="2-digit" >
+                </lightning-formatted-date-time-->
+                <div class="slds-truncate" title={statedate.lastupdatedtime}>{statedate.lastupdatedtime}</div>
+              </td>
+            
+        </tr>
+
+    </template>
+    
+    </tbody>
+    </table>
+  </div>
+  <div class='slds-col'></div>
+  <div class='slds-col'>
+    <template if:true={selectedstate}>
+    <c-districtwise-data state={selectedstate}></c-districtwise-data>
+  </template>
+  </div>
+  </div>
+</template>

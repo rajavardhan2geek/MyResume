@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name='childAttr' type='String'/>
+    
+    <ui:button label='update child Attr' press="{!c.updatechildAttr}" ></ui:button>
+    <p>child component :{!v.childAttr}</p>
+</aura:component>

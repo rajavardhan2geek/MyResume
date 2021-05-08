@@ -1,0 +1,71 @@
+<template>
+    <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered">
+        <thead>
+        <tr class="slds-line-height_reset">
+        <th class="" scope="col">
+        <div class="slds-truncate" title="State/UT">District</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Active">Active</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Confirmed">Confirmed</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Recovered">Recovered</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Deaths">Deaths</div>
+        </th>  
+        <th class="" scope="col">
+            <div class="slds-truncate" title="notes">notes</div>
+            </th>  
+    </tr>
+    </thead>
+    <template for:each={districtList} for:item='statedate'>
+        <tr class='slds-hint-parent' key={statedate.district}>
+           <td>
+                <div class="slds-truncate" title={statedate.district}>
+                   {statedate.district}
+                </div>
+                 </td>
+                <td data-label="active">
+                    <div class="slds-truncate" title={statedate.active}>{statedate.active}
+                        
+                        
+                    </div>
+               </td>
+               <td data-label="confirmed">
+                <div class="slds-truncate" title={statedate.confirmed}>{statedate.confirmed}
+                        
+                        <span style='color:red'>  ({statedate.delta.confirmed})</span>
+                </div>
+              </td>
+              <td data-label="deltarecovered">
+                <div class="slds-truncate" title={statedate.recovered}>{statedate.recovered}
+
+                    <span style='color:green'>  ({statedate.delta.recovered})</span>
+                </div>
+              </td>
+              <td data-label="deaths">
+                <div class="slds-truncate" title={statedate.deceased}>{statedate.deceased}
+
+                  
+                    <span style='color:red'>  ({statedate.delta.deceased})</span>
+                  
+                </div>
+              </td>
+              <td data-label="deaths">
+                <div class="slds-truncate" title={statedate.notes}>{statedate.notes}
+
+                  
+
+                  
+                </div>
+              </td>
+         </tr>
+         </template>
+        
+         </table>
+
+</template>

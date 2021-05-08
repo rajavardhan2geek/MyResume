@@ -1,0 +1,69 @@
+<template>
+    <lightning-tabset>
+        <lightning-tab label="Unit Converstion">
+            <lightning-combobox
+            name="Dimension Type"
+            value={dimension}
+            placeholder="Select Dimension"
+            options={dimensionsList}
+            onchange={onChgDim}
+            required
+          ></lightning-combobox>
+          <template if:true={showArea}>
+            <lightning-input type="number"  name="MeasuredUnit"  onchange={onConversion} formatter="decimal" value={measuredunit}></lightning-input>
+
+            <lightning-combobox
+            name="measurementunits"
+            label="Enter Measurement Type"
+            value={measuredunittype}
+            placeholder="Select measurement type"
+            options={measuredunits}
+            onchange={onChgUnitType}
+            required
+                 ></lightning-combobox>
+    
+        <lightning-input type="number" name="area" value={convertedmeasure} formatter="decimal" step="0.01"></lightning-input>
+        <lightning-combobox
+            name="measurementunits"
+            label="Enter Measurement Type"
+            value={measuredunittype}
+            placeholder="Select measurement type"
+            options={measuredunits}
+            onchange={onChgUnitType}
+            required
+                 ></lightning-combobox>
+
+
+
+</template>
+            
+        </lightning-tab>
+        <lightning-tab label="Areas" title="Area">
+            <lightning-combobox
+            name="measurementunits"
+            label="Enter Measurement Type"
+            value={measuredunittype}
+            placeholder="Select measurement type"
+            options={measuredunits}
+            onchange={onChgUnitType}
+            required
+    ></lightning-combobox>
+        </lightning-tab>
+
+        <lightning-tab label="Volume" title="Volume">
+            <lightning-combobox
+            name="measurementunits"
+            label="Enter Measurement Type"
+            value={measuredunittype}
+            placeholder="Select measurement type"
+            options={measuredunits}
+            onchange={onChgUnitType}
+            required
+    ></lightning-combobox>
+        </lightning-tab>
+        </lightning-tabset>
+       
+    
+    
+
+</template>

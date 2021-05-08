@@ -1,0 +1,45 @@
+<!--
+
+    Order LWC Component
+-->
+
+<template>
+<h1>Order Items</h1>
+<lightning-record-edit-form record-id='{orderId}' object-api-name='Order'>
+<div class="slds-grid">
+<div class="slds-col slds-size_1-of-2">
+        <lightning-input-field field-name="AccountId">
+            </lightning-input-field>
+</div>
+<div class="slds-col slds-size_2-of-2">
+        <lightning-input-field field-name="OrderNumber">
+            </lightning-input-field>
+</div>
+</div>
+</lightning-record-edit-form>
+
+
+<template if:true={orderItems}>
+    <template for:each={orderItems.data} for:item='orderitem' >
+    <lightning-record-edit-form key='{orderitem.Id}' record-id='{orderitem.Id}' object-api-name='OrderItem' onsubmit={handleSucess}>
+        <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-3">
+                <lightning-input-field field-name="Product__c">
+                    </lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_2-of-3">
+                <lightning-input-field field-name="OrderItemNumber">
+                    </lightning-input-field>
+        </div>
+        </div>
+        <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-1">
+              <lightning-button name='Save'  type="submit" label='Save' >
+
+              </lightning-button>
+        </div>
+        </div>
+        </lightning-record-edit-form>
+    </template>
+</template>
+</template>

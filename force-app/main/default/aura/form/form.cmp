@@ -1,0 +1,39 @@
+<aura:component controller='ExpenseController'>
+        <aura:attribute name="Expenses" type="Expense__c[]"/>
+    <aura:attribute name="NewExpenses" type="Expense__c" default="{sObjectType:'Expense__c' ,Name:'','Amount__c': 0,
+                         'Client__c': '','Date__c': '','Reimbursed__c': false }" />
+    <aura:attribute name="totalAmount" type="Double" default='0.00'/>
+    <aura:attribute name="numberOfExpItems" type="Double" />
+    <aura:handler name='init' value='{!this}' action='{!c.doInit}'/>
+    <aura:handler name="updateExpense" event="c:updateExpenseItem" action="{!c.updateEvent}" />
+    <form>
+     <div>
+         <br/>
+         <ui:inputText label="Name" aura:id='expname' value="{!v.NewExpenses.name}"/><br/>
+         <ui:inputNumber label="Amount" aura:id='amt' placeholder="20.80" value="{!v.NewExpenses.Amount__c}"/><br/>
+         <ui:inputText label="Client" aura:id='client' value="{!v.NewExpenses.Client__c}"/><br/>
+         <ui:inputDateTime label="Date" aura:id='date' value="{!v.NewExpenses.Date__c}" displayDatePicker='true'/><br/>
+         <ui:inputCheckbox label="Reimbursed?" aura:id='reimb' value="{!v.NewExpenses.Reimbursed__c}"/><br/>
+         <ui:button label="submit" press="{!c.createExpense}"/>
+         
+         
+        </div>
+        
+        <div>
+            <p> toal Expenses </p><br/>
+            <ui:button label="getTotalExpenses" press="{!c.getTotalExpenses}"  />
+            <ui:outputNumber value='{!v.totalAmount}'/><br/>
+            <ui:outputNumber value='{!v.numberOfExpItems}'/>             
+        </div>
+        
+        <div align='bottom'>
+            <p> another list of expenses components</p>
+             <aura:iteration items="{!v.Expenses}" var="expense">
+  			  <!--If you’re using a namespace, use myNamespace:expenseList instead-->
+               
+</aura:iteration>
+        </div>
+    </form>
+    
+    
+</aura:component>

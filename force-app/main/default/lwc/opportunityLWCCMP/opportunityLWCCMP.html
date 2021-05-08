@@ -1,0 +1,71 @@
+<template>
+
+         <p>Hello LWC</p>
+         
+    <!--template if:true={opportunityList}>
+
+    <template for:each={opportunityList.data} for:item='opportunity' for:index='index'>
+       
+    <lightning-record-edit-form key='{opportunity.Id}' record-id= '{opportunity.Id}'  object-api-name="Opportunity">
+        <lightning-messages>
+            </lightning-messages>
+           
+            <lightning-input-field field-name="Name">
+                </lightning-input-field>
+            <lightning-input-field field-name="AccountId">
+            </lightning-input-field>
+        <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update">
+            </lightning-button>
+</lightning-record-edit-form-->
+
+<template if:true={opportunityList}>
+<lightning-datatable
+key-field="Id"
+data={opportunityList.data}
+columns={columns}>
+</lightning-datatable>
+</template>
+
+
+<lightning-record-edit-form onsuccess={handlerefresh}  object-api-name="Opportunity">
+    <lightning-messages>
+        </lightning-messages>
+       
+        <lightning-input-field field-name="Name">
+            </lightning-input-field>
+        <lightning-input-field field-name="AccountId">
+        </lightning-input-field>
+        <lightning-input-field field-name="StageName">
+        </lightning-input-field>
+        <lightning-input-field field-name="CloseDate">
+        </lightning-input-field>
+    <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update">
+        </lightning-button>
+    </lightning-record-edit-form>
+<!--template if:true={opportunity.OpportunityLineItems}>
+ 
+
+<template for:each={opportunity.OpportunityLineItems} for:item='OLI' for:index='index'>
+    
+       
+            <lightning-record-edit-form key='{OLI.Id}' record-id= '{OLI.Id}'  object-api-name="OpportunityLineItem">
+                
+                    <div class="slds-grid slds-size_2-of-2">
+                            <div class="slds-col slds-size_1-of-2">
+                      <lightning-input-field field-name="Product2Id">
+                                      </lightning-input-field>
+                                      </div>
+                                      <div class="slds-col slds-size_2-of-2">
+                                            <lightning-input-field field-name="Quantity">
+                                                            </lightning-input-field>
+                                                            </div>
+                                                            </div>    
+                   
+            </lightning-record-edit-form>
+     
+    </template>
+ 
+    </template-->
+   
+
+</template>

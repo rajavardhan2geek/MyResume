@@ -1,0 +1,72 @@
+<aura:component controller='HospitalController' implements='force:appHostable,flexipage:availableForAllPageTypes'>
+    <aura:attribute name='hospitals' type='Hospital__c[]'/>
+    <aura:attribute name ='searchStr' type='String' />
+    <aura:handler name="init" value='{!this}' action='{!c.doInit}' />
+    <ltng:require scripts="/resource/1523895804000/Jquery,/resource/1523896281000/JqueryUI"  />
+    <div class='slds-grid slds-grid_vertical'>
+        
+			<div class='slds-col'>
+			<div class='slds-form-element'>
+			<div class="slds-form-element__control">
+                <div class="slds-combobox_container slds-has-inline-listbox">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open" 
+                         aria-expanded="true" aria-haspopup="listbox" role="combobox" style="width:95%">
+						<div class='slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right'>
+						<div>
+                            <lightning:input type='search'  class='slds-input slds-combobox__input' aura:id='searchStr' onchange='{!c.handleSearch}' placeholder='Search for hospitals' />
+							
+							
+                            <lightning:Icon iconName="utility:close" />
+							
+                        
+							    
+			 </div>
+			 </div>
+			 </div>
+			</div>
+			</div>
+			</div>
+			</div>
+			 
+			
+			     
+     
+     
+     		<div class='slds-col'>
+          		<table class='slds-table slds-table_bordered slds-table_cell-buffer'>
+   				<thead>
+   					<tr class='slds-text-title_caps'>
+   					<th scope='col'>
+    					<div class='slds-truncate'>Hospital Name</div></th>
+   					<th scope='col'>
+    					<div class='slds-truncate'>Hospital Name</div></th>
+    					<th scope="col">
+      					 <div class="slds-truncate" title="City">City</div>
+    					 </th>
+     				<th scope="col">
+       				<div class="slds-truncate" title="Category">Category</div>
+    				 </th></tr>
+   					</thead>
+ 				  <tbody>
+           			 <aura:iteration items='{!v.hospitals}' var='hospital'>
+                		 <c:HospitalList hospital="{!hospital}"/>
+                		
+           			</aura:iteration>
+           			</tbody>
+           			</table>
+        	</div>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+ 
+    
+    
+    
+    
+</aura:component>

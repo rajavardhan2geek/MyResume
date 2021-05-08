@@ -1,0 +1,6 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" >
+	<lightning:recordEditForm  objectApiName='Company__c' recordId='a0t7F00000ARdNAQA1'>
+             <lightning:messages />
+        <lightning:inputField fieldName='OwnerId'/>
+    </lightning:recordEditForm>
+</aura:component>

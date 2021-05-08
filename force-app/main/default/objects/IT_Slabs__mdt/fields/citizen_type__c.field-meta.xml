@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>citizen_type__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>citizen type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mid Level (&lt;60)</fullName>
+                <default>true</default>
+                <label>Mid Level (&lt;60)</label>
+            </value>
+            <value>
+                <fullName>Senior (60 to 80)</fullName>
+                <default>false</default>
+                <label>Senior (60 to 80)</label>
+            </value>
+            <value>
+                <fullName>Super Senior (&gt;80)</fullName>
+                <default>false</default>
+                <label>Super Senior (&gt;80)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

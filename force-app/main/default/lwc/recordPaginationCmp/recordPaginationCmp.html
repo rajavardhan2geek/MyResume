@@ -1,0 +1,72 @@
+<template>
+    <lightning-card  title="recordList">
+        
+        <div class='slds-p-around_medium'>
+
+        <template if:true={recordList}>
+
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                      <th class="" scope="col">
+                        <div class="slds-truncate" title="checkbox">
+                            <lightning-input type='checkbox'  ></lightning-input>
+                        </div>
+                      </th>
+                      <th class="" scope="col">
+                        <div class="slds-truncate" title="Name">Name</div>
+                      </th>
+                      <th class="" scope="col">
+                        <div class="slds-truncate" title="Email">Email</div>
+                      </th>
+                      <th class="" scope="col">
+                        <div class="slds-truncate" title="AccountName">AccountName</div>
+                      </th>
+                      <th class="" scope="col">
+                        <div class="slds-truncate" title="Date of Birth">Created Date</div>
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <template for:each={recordList} for:item=record>
+                        <tr key={record.Id}    >
+                            <td>   <lightning-input type='checkbox' data-value={record.Id}  onchange={onselected} checked={record.selected} ></lightning-input></td>
+                            <td>{record.Name}</td>
+                            <td><lightning-input value={record.Email} data-value={record.Id} onchange={handleEmailChg} ></lightning-input></td>
+                            <td>{record.AccountName}</td>
+                            <td>{record.CreatedDate}</td>
+                        </tr>
+
+                    </template>
+
+
+                    </tbody>
+
+
+
+            </table>
+
+
+        </template>
+        <lightning-layout>
+                <div class='slds-align_absolute-center'>  
+         <lightning-layout-item>
+        <lightning-button label='previous' icon-name="utility:chevronleft" disabled={isDisabled} onclick={handlePrevious}></lightning-button>
+
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="grow" class='slds-p-left_medium' ></lightning-layout-item>
+        <lightning-layout-item class='slds-p-around_medium'>
+            <div class='slds-align_absolute-center'>{count}</div>
+            </lightning-layout-item>
+          <lightning-layout-item >
+                        <lightning-button label='next' icon-name="utility:chevronright"  onclick={handleNext}></lightning-button>
+
+      </lightning-layout-item>
+
+           </div>
+
+        </lightning-layout>
+
+        </div>
+    </lightning-card>
+</template>

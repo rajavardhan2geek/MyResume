@@ -1,0 +1,25 @@
+<aura:component controller="QuestionController">
+		<aura:handler name='sampleComponentEvent' event='c:SampleEventProp' action="{!c.handleformresp}"/>
+    <aura:attribute name='message' type='String'/>
+    <aura:attribute name='msg' type='String'/>
+    <aura:attribute name='FormResponses' type='FormResponse__c[]'/>
+   <aura:attribute name='formresparr' type='FormResponse__c' default="{Response__c:'',Question__c:''}"/>
+    
+    <div aura:id='alertmsg'>
+      
+		   <div class="slds-modal__container">
+                                    <table class='slds-table slds-table_bordered slds-table_cell-buffer' border='2'>
+ 	  				 <tr class='slds-text-title_caps'>
+    				<td>field name</td>  <td>field value</td>
+ 		       </tr>
+                      <tr >  <td>{!v.msg} </td><td> {!v.message}</td>     </tr>                   
+    		</table>
+                    
+     <lightning:button label='get response'> </lightning:button>                  
+    </div>
+   
+    </div>
+    
+
+   
+</aura:component>

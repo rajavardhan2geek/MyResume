@@ -1,0 +1,48 @@
+<aura:component implements='force:lightningQuickAction,force:hasRecordId,lightning:isUrlAddressable' controller='RecordFormCustomUI'>
+    <aura:attribute name='fieldsarray' type='String[]' default="['Name']"/>
+    <aura:attribute name='recordId' type='String'/>
+    <aura:attribute name='recId' type='String'/>
+      <aura:attribute name='oppMap' type='Map' />
+    <aura:attribute name='showcr' type='Boolean' default='false'/>
+    <aura:attribute name='campsite' type='Campsite__c' default="['Name','Id']"/>
+     <aura:attribute name='campsitereservations' type='Campsite_Reservation__c[]' />
+     <aura:handler name='init' value='{!this}' action='{!c.doInit}' /> 
+   
+	
+    <div>
+      <table border='2'>
+          <tr>
+          <td>Name</td>
+           <td>User</td>
+          </tr>
+    <!--aura:iteration items='{!v.oppMap}' var='campsitereservation'>
+        <tr data-value='{!campsitereservation.Id}' onclick='{!c.showrecordForm}' >
+        <td>{!campsitereservation.Name} </td>
+        <td>{!campsitereservation.User__c} </td>
+    	</tr>
+       	</aura:iteration-->
+    </table>
+        
+    <aura:iteration items='{!v.oppMap.keySet}' var='oppKey'>
+        
+        {!oppKey}
+        </aura:iteration>
+        
+    </div>
+    
+    <!--div aura:id='showcr'>
+    <lightning:recordEditForm
+        recordId="{!v.recId}"
+        objectApiName="Campsite_Reservation__c"
+       >
+    
+        <lightning:inputField fieldName='Name' />
+                <lightning:button class="slds-m-top_small" variant="brand" type="submit" name="save" label="save" />
+          <lightning:button class="slds-m-top_small" variant="brand" type="cancel" name="cancel" label="cancel" />
+
+    </lightning:recordEditForm>
+       
+       
+          
+    </div-->
+</aura:component>

@@ -1,0 +1,12 @@
+<aura:component implements='force:appHostable' controller='AccountContrl' >
+    <aura:attribute name='hospital' type='Hospital__c'/>
+    <aura:handler name='init' action='{!c.doInit}' value='{!this}'/>
+    
+    
+
+   Welcome
+   
+    
+    
+    
+</aura:component>

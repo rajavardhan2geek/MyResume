@@ -1,0 +1,54 @@
+<template>
+    <svg class='remainingtimer' width="600" height="200">
+        <circle class='remainingtimer--circle' cx="60" cy="100" r="50" stroke="green" stroke-width="4" fill="white" >
+            
+        </circle>
+        <text x="60" y="100" 
+              text-anchor="middle"
+              stroke="black"
+              stroke-width="1px"
+              > 
+              {remainingdays} Days
+        </text>
+        <circle class='remainingtimer--circle' cx="170" cy="100" r="50" stroke="green" stroke-width="4" fill="white" >
+          
+        </circle>
+        <text x="170" y="100" 
+              text-anchor="middle"
+              stroke="black"
+              stroke-width="1px"
+              > 
+              {remainingHours} 
+        </text>
+        <circle class='remainingtimer--circle' cx="280" cy="100" r="50" stroke="green" stroke-width="4" fill="white" >
+            
+        </circle>
+        <text x="280" y="100" 
+        text-anchor="middle"
+        stroke="black"
+        stroke-width="1px"
+        > 
+        {remainingMinutes} 
+    </text>
+        <circle class='remainingtimer--circle' cx="390" cy="100" r="50" stroke="green" stroke-width="4" fill="white" >
+       
+        </circle>
+        <text x="390" y="100" 
+        text-anchor="middle"
+        stroke="black"
+        stroke-width="1px"
+        > 
+        {remainingSeconds} 
+    </text>
+        <!--circle class='remainingtimer--circle' cx="500" cy="100" r="50" stroke="green" stroke-width="4" fill="white" >
+            
+        </circle-->
+        <!--text x="500" y="100" 
+        text-anchor="middle"
+        stroke="black"
+        stroke-width="1px"
+        > 
+        {remainingMilisec}
+    </text-->
+     </svg> 
+</template>

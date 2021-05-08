@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,force:lightningQuickAction" >
+    
+     <aura:handler name='init' value='{!this}' action='{!c.doInit}' /> 
+    <aura:attribute name='expense' type='String' />
+    <aura:attribute name='expenseMap' type='Map' />
+    <lightning:input type='text' value='hello' />
+    <lightning:button type='button' label='readdata' onclick='{!c.readOther}'/>
+   
+    <p> This is lightning component</p>
+    
+      <div class='cmp2'>
+    	<p> This is UI Component</p>
+          <h1>sdsd</h1>
+        <ui:inputText  label="Enter some text" class="field" value="{!v.expense}" updateOn="click" />
+    	<ui:outputText value='{!v.expense}'   />
+            <lightning:button type='button' label='readdata' >Submit</lightning:button>
+    </div>
+        <div>
+            <c:LightningLockerManged/>
+    </div>
+</aura:component>

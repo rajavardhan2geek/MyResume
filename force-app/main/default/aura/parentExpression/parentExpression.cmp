@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable"  >
+    <aura:attribute name="parentAttr" default="parent button" type='String' />
+    
+ 	
+    <ui:button label='updateparent' press="{!c.updateparentAttr}" ></ui:button>
+    <c:Childcomponent childAttr='{!v.parentAttr}'/>
+      <p> parent attribute: {!v.parentAttr}</p>
+    
+</aura:component>

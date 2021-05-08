@@ -1,0 +1,7 @@
+<aura:component >
+<aura:handler action="{!c.handleevent}" name="captureEvent" event="c:ComponentEventRootApp"  phase='capture' />
+	<aura:attribute name="parentD" type="String" description="attribute D" />
+	{!v.parentD}	
+<lightning:button name='buttonD'  label='Component D'/>
+<c:SubComponentD /> 
+</aura:component>

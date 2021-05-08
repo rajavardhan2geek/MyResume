@@ -1,0 +1,7 @@
+<aura:component implements='force:hasRecordId,lightning:isUrlAddressable' >
+    <aura:attribute name='recId' type='String' access='global'/>
+                                        
+    <aura:handler name='init' value='{!this}' action='{!c.doInit}'/>
+    <lightning:navigation aura:id='navService'/>
+    
+</aura:component>

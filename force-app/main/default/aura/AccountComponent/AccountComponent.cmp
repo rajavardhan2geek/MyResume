@@ -1,0 +1,56 @@
+<aura:component access='global' implements="force:lightningQuickAction,force:hasRecordId,flexipage:availableForAllPageTypes,force:appHostable" controller='AccountDao'  >
+    <aura:attribute name='account' type='Account' />
+     <aura:attribute name='contactList' type='Contact[]'  />
+      <aura:attribute name='OppList' type='Opportunity[]'  />
+    <aura:attribute name='selectedtab' type='String'/>
+    <aura:handler name="init"  value="{!this}"  action="{!c.doInit}"/>
+	<lightning:tabset onselect='{!c.selecttab}' selectedTabId ='{!v.selectedtab}' >
+	       <lightning:tab label="Account" id='accounts'>
+
+         
+              <lightning:input type='text' value='{!v.account.Name}'/>
+              <lightning:input type='text' value='{!v.account.AccountNumber}'/>
+                <lightning:input type='text' value='{!v.account.AccountNumber}'/>
+       
+           </lightning:tab> 
+    		 <lightning:tab label='Contact'   id='contacts'>
+    		 <table>
+                 <aura:iteration items='{!v.contactList}' var='contact'>
+    			 <tr>
+    		
+    		    <lightning:recordEditForm recordId='{!contact.Id}' objectApiName='Contact'>
+    		    <td><lightning:input  type='text'  value='{!contact.Name}' /></td>
+              <td>       <lightning:inputField fieldName='AccountId'  value='{!contact.AccountId}'/></td>
+                     
+               <td> 		 <lightning:inputField fieldName='Birthdate'  value='{!contact.LastCURequestDate}'/></td>
+                <td> <lightning:formatteddatetime type='Date' value= '{!contact.Birthdate}'/></td> 	
+                     </lightning:recordEditForm>
+                   
+    		
+    		 </tr>
+    		 </aura:iteration>
+    		</table>
+   			  </lightning:tab>
+     		<lightning:tab label='Opportunities' id='opportunities'>
+     		
+     		 <table>
+                 <aura:iteration items='{!v.OppList}' var='Opportunity'>
+    			 <tr>
+    		
+    		    <lightning:recordEditForm recordId='{!Opportunity.Id}' objectApiName='Opportunity'>
+    		     <td><lightning:input  type='text'  value='{!Opportunity.Name}' />  </td>
+              <td>       <lightning:inputField fieldName='AccountId'  value='{!Opportunity.AccountId}'/></td>
+                     
+               <td><lightning:inputField fieldName='CloseDate'  value='{!Opportunity.CloseDate}'/></td>
+                     </lightning:recordEditForm>
+                   
+    		
+    		 </tr>
+    		 </aura:iteration>
+    		</table>
+     		
+     		
+     		 </lightning:tab>
+  </lightning:tabset>
+    
+</aura:component>

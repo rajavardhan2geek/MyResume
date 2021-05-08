@@ -1,0 +1,15 @@
+<template>
+
+      <template if:true={dailyExpenses}>
+
+            <lightning-datatable
+            key-field="id"
+            data={dailyExpenses}
+            columns={columns}
+            onrowaction={handleRowAction}>
+           </lightning-datatable>
+           
+        </template>
+     <c-data-table-parent></c-data-table-parent>
+      
+</template>

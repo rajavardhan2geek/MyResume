@@ -1,0 +1,23 @@
+<template>
+    <lightning-accordion allow-multiple-sections-open active-section-name="A" onsectiontoggle={handleSectionToggle} >
+        <lightning-accordion-section name="Upload Image" label="Bill Image">
+            <p>This is the content area for section A.</p>
+
+            <lightning-file-upload
+    label="Upload Training Images"
+    name="fileUploader"
+    accept=".csv,.doc,.xsl,.pdf"
+    record-id="XXXXXXXX98766"
+    onuploadfinished={handleUploadFinished}
+        >
+</lightning-file-upload>
+        </lightning-accordion-section>
+        <lightning-accordion-section name="Output" label="Results">
+            <p>This is the content area for section B.</p>
+        </lightning-accordion-section>
+        <lightning-accordion-section name="C" label="Accordion Title C">
+            <p>This is the content area for section C.</p>
+        </lightning-accordion-section>
+    </lightning-accordion>
+
+</template>

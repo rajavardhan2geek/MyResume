@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>TFMetadataConfig</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TFMetadataConfig</shortDescription>
+        <value>Trigger_Setting__mdt</value>
+    </labels>
+    <labels>
+        <fullName>TFMetadataFields</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TFMetadataSelectFields</shortDescription>
+        <value>SObject_Api_Name__c,MasterLabel,isDisabled__c,afterInsert__c,afterUpdate__c,beforeInsert__c,beforeUpdate__c,afterDelete__c,beforeDelete__c,afterUndelete__c</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,18 @@
+<template>
+
+    <div onnotify='{handlenotifyOuterParentEvent}' onhostevent='{handlehostgparent}'>
+
+            click here to handle child event 
+  
+      
+    <div onnotify='{handlenotifyParentEvent}' onhostevent='{handlehostParent}'> 
+       
+        <c-lwcchildeventfire onnotify='{handlenotifyEvent}' onhostevent='{handlehosteventshadow}'></c-lwcchildeventfire>
+    </div>
+    <div>
+
+        <c-lwc-child-event2></c-lwc-child-event2>
+    </div>
+
+</div>
+</template>

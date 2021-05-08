@@ -1,0 +1,5 @@
+<design:component>
+	<design:attribute name="oRecord" label="oRecord" placeholder="Hello" required="true"/>
+<design:attribute name="IconName" label="IconName" placeholder="Hello" required="true"/>
+
+</design:component>

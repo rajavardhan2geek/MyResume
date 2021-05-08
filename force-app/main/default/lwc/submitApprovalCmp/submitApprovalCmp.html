@@ -1,0 +1,47 @@
+<template>
+    <div class="slds-card">
+<span class="slds-card__header-title slds-truncate">Items to Approve </span>
+<table class="slds-table slds-table_cell-buffer slds-table_bordered">
+    <thead>
+        <tr class="slds-line-height_reset">
+          <th class="" scope="col">
+            <div class="slds-truncate" title="approve">
+              Process Definition Name
+            </div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Name">SObject</div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Email">Sobject Record Id</div>
+          </th>
+          
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Date of Birth">Status</div>
+          </th>
+          
+        </tr>
+        </thead>
+        <tbody>
+            <template for:each={processInstances} for:item=processInstance>
+                <tr key={processInstance.Id}>
+                    <td data-key={processInstance.Id}>{processInstance.Name}</td>
+                    <td>{processInstance.SObjectName}</td>
+
+                    <td data-key={processInstance.targetRecordId} onclick={navigatetoURL}><a>{processInstance.targetRecordName}</a></td>
+                    <td>{processInstance.status}</td>
+                    
+                </tr>
+        
+            </template>
+</tbody>
+</table>
+<br/>
+<lightning-datatable  
+ data={processInstances}
+columns={columns}
+key-field="Id"></lightning-datatable>
+
+
+</div>
+</template>

@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name='contactinp' type='Contact' access='private'  default="['sobjectType':'Contact','Product__c':'']"  />
+   <aura:attribute name='contactrecord' type='Contact' access='public' />
+     <aura:handler name="init"  value="{!this}"  action="{!c.doInit}"/>
+     <lightning:recordEditForm recordId='{!v.contactinp.Id}' objectApiName='Contact'>
+    <lightning:inputField fieldName='Account'  value='{!contactinp.Product__c}'/>  
+         </lightning:recordEditForm>
+
+</aura:component>

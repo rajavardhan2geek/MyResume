@@ -1,0 +1,21 @@
+.header{
+    font-style: normal;
+    font-family: sans-serif;
+    color:rgb(87,160,211);
+}
+.headername{
+
+    font-style: normal;
+    font-size: large;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color:rgb(0,0,0);
+
+}
+.education{
+    font-size: medium;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color:rgb(0,0,0);
+}
