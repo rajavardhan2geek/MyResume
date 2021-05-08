@@ -1,0 +1,21 @@
+<template>
+<table>
+<tr> 
+   <td> Field Name</td> 
+   <td> Field Api Name</td> 
+    
+</tr>
+
+<template if:true={fieldlist}>
+    <template for:each={fieldlist} for:item='fieldapi'>
+        <tr key={fieldapi}>
+            <td>{fieldapi.label}</td>
+            <td>{fieldapi.value}</td>
+        </tr>
+    </template>
+    
+    </template>
+    
+  
+</table>
+</template>

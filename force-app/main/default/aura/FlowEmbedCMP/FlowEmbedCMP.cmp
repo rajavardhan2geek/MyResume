@@ -1,0 +1,11 @@
+<aura:component implements='force:lightningQuickAction'>
+    <aura:attribute name='result' type='boolean' default='false'/>
+     <aura:handler name="init" value="{!this}" action="{!c.init}" />
+	<aura:if isTrue='{!v.result ==false}'> 
+    <lightning:flow aura:id="flowData" onstatuschange='{!c.handleStatusChange}'/>
+    </aura:if>
+    <aura:if isTrue='{!v.result}'>
+    
+       <lightning:button >Submit For Approval </lightning:button>
+    </aura:if>
+</aura:component>

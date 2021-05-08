@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Level__c</fullName>
+    <externalId>false</externalId>
+    <label>Job Level</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Functional_Area__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FN-100</fullName>
+                <default>false</default>
+                <label>FN-100</label>
+            </value>
+            <value>
+                <fullName>FN-200</fullName>
+                <default>false</default>
+                <label>FN-200</label>
+            </value>
+            <value>
+                <fullName>HR-100</fullName>
+                <default>false</default>
+                <label>HR-100</label>
+            </value>
+            <value>
+                <fullName>HR-200</fullName>
+                <default>false</default>
+                <label>HR-200</label>
+            </value>
+            <value>
+                <fullName>IT-100</fullName>
+                <default>false</default>
+                <label>IT-100</label>
+            </value>
+            <value>
+                <fullName>IT-200</fullName>
+                <default>false</default>
+                <label>IT-200</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <valueName>FN-100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <valueName>FN-200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <valueName>HR-100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <valueName>HR-200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information Technology</controllingFieldValue>
+            <valueName>IT-100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Warehousing</controllingFieldValue>
+            <controllingFieldValue>SME</controllingFieldValue>
+            <valueName>IT-200</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

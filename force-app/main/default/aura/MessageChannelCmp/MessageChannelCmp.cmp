@@ -1,0 +1,3 @@
+<aura:component>
+    <lightning:messageChannel type="commChannel__c" aura:id="sampleMessageChannel" onMessage='{!c.handleMsg}'></lightning:messageChannel>
+</aura:component>

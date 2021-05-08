@@ -1,0 +1,30 @@
+<template>
+
+
+<article  class='slds-card slds-card_boundary forceRelatedListCardDesktop'> 
+<div  class='slds-card__header slds-grid'>
+                <ul>
+<template for:each='{contactMap}' for:item='cnt' for:index='index' >
+        <li  key={cnt.isMod5} class='slds-var-p-horizontal_medium slds-var-p-vertical_xx-small desktop forceImageRelatedListStencil forceRecordLayout'>
+        <c-contact-List-Item key={cnt.isMod5} index-var={cnt.isMod5}  contact={cnt.contact} onselectcontactid={contactSelected}></c-contact-List-Item>
+        </li>
+</template>
+</ul>
+</div>
+</article>
+<!--template if:true={contactdatalist.data}>
+<ol>
+        <template iterator:iter={contactdatalist.data} >
+                <li key={iter.value.id}>{iter.value.Name} </li>
+        </template>
+</ol>
+</template>
+<template if:true={selectedContact}>
+    <p>selected Contact is {selectedContact.Name}</p>
+</template>
+
+        <c-pagination-Lwc-Demo onpagechange={pagechangedhandler}></c-pagination-Lwc-Demo-->
+
+
+
+</template>

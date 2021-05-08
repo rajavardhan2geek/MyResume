@@ -1,0 +1,14 @@
+<template>
+    <p>SObject Name</p>
+    <div class="slds-p-around_medium lgc-bg slds-theme_default">
+        <ul class="slds-has-dividers_bottom-space">
+           <template for:each={sobjectsList.data} for:item="sobject">
+            <li class="slds-item" key={sobject}    draggable="true" >
+                <lightning-tile label={sobject} data-item={sobject} ondragstart={handleDragStart} >
+                    
+                </lightning-tile>
+            </li>
+           </template>
+    </ul>
+  </div>
+</template>

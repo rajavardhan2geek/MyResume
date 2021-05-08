@@ -1,0 +1,60 @@
+<aura:component controller='LookupCntrllr'>
+    <aura:attribute name='itemlst' type='Object[]'/>
+    <aura:attribute name ='searchKey' type='String' />
+    <aura:attribute name ='objectname' type='String' required='true'/>
+     <aura:attribute name ='lookupicon' type='String' required='true'/>
+     <aura:attribute name ='fname' type='String' required='true'/>
+    <div class='slds-grid slds-grid_vertical'>
+        <div class='slds-col'>
+        <div class='slds-form-element'>
+            <div class="slds-form-element__control">
+             <div class="slds-combobox_container slds-has-inline-listbox">
+                 <lightning:input aura:id='searchKey' class='slds-input slds-combobox__input' onchange='{!c.searchAccounts}' type='search' />
+                  <lightning:button  onclick="{!c.searchAccounts}" type='search'  label='search'/>
+                </div>
+            
+            
+            </div>
+            </div>
+            
+        </div>
+         <div class='slds-col'>
+          		<table class='slds-table slds-table_bordered slds-table_cell-buffer'>
+   				<thead>
+   					<tr class='slds-text-title_caps'>
+   					<th scope='col'>
+    					<div class='slds-truncate'>Hospital Name</div></th>
+   					<th scope='col'>
+    					<div class='slds-truncate'>Hospital Name</div></th>
+    					<th scope="col">
+      					 <div class="slds-truncate" title="City">City</div>
+    					 </th>
+     				<th scope="col">
+       				<div class="slds-truncate" title="Category">Category</div>
+    				 </th></tr>
+   					</thead>
+ 				  <tbody>
+                      
+           			<aura:iteration items='{!v.itemlst}' var='item'>
+                      <tr>
+                          
+                          <td>
+                          <span class='slds-pill__icon_container'>
+                              <lightning:icon iconName ='{!v.lookupicon}' size="x-small"></lightning:icon>
+                              {!item.fnamevalue}
+                              
+                          </span>
+                          
+                          
+                          </td>
+                         
+                         <td>{!item.fnamevalue}</td> 
+                        
+                         </tr> 
+                      </aura:iteration>
+                          
+           			</tbody>
+           			</table>
+        	</div>
+    </div>
+</aura:component>

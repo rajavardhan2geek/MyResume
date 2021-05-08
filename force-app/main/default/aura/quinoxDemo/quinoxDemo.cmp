@@ -1,0 +1,10 @@
+<aura:component implements='forceCommunity:availableForAllPageTypes'>
+	<p> Hi CMP 1</p>
+    <lightning:recordEditForm objectApiName="Contact" >
+        dfd
+        <lightning:messages/>
+              
+
+        <lightning:inputField fieldName='AccountId'/>
+    </lightning:recordEditForm>
+</aura:component>

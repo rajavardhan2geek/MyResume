@@ -1,0 +1,17 @@
+<aura:component implements='force:appHostable,flexipage:availableforAllPageTypes'>
+    <lightning:messageChannel aura:id='sampleMessageChannel' type="SampleChannel__c" scope="APPLICATION" onMessage="{!c.handleChanged}"/>
+
+    <aura:attribute name='sender' type='String' />
+     <aura:attribute name='message' type='String'/>
+<div class='slds-p-around--medium'>
+	<aura:renderIf isTrue="{!v.message}">    
+        <ui:outputText  value="{!v.sender}" />
+		 <ui:outputText value="{!v.message}" />
+    </aura:renderIf>
+	
+    <lightning:input type="text" name="input5" label="Required date field" required="true" aura:id='message' />
+    <lightning:button onclick="{! c.handleClick }" label='click'  value='click me'/>
+</div>
+    
+
+</aura:component>

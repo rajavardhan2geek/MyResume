@@ -1,0 +1,6 @@
+<aura:event type="COMPONENT">
+   
+    
+     <aura:attribute name="formfields" type="FormResponse__c" />
+      <aura:attribute name="formobjarray" type="FormResponse__c[]" />
+</aura:event>

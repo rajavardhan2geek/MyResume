@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title={cardTitle} icon-name="standard:address">
+        <!--lightning-map map-markers={mapMarkers} zoom-level="12"></lightning-map-->
+        
+        <template if:true={boat}>
+            {boat}
+            <lightning-output-field value={boat}></lightning-output-field>
+        </template>
+        
+
+	</lightning-card>
+</template>

@@ -1,0 +1,43 @@
+<template>
+    <lightning-card  title="Web Client Tool">
+        <div class='slds-p-around_medium'>
+        <lightning-button label="User Agent" onclick={useragentflow} ></lightning-button>
+        </div>  <div class='slds-p-around_medium'>
+        <lightning-button label="Web Server" onclick={WebServerflow} ></lightning-button>
+        </div>
+        <div class='slds-p-around_medium'>
+            <div class="slds-grid slds-gutters">
+
+                <div class="slds-col slds-size_0.5-of-3">
+            
+                <lightning-combobox
+                name="reqtype"
+                value={reqtype}
+                options={requests}
+                onchange={handleChange} ></lightning-combobox>
+            </div>
+
+            <div class="slds-col slds-size_2-of-3">
+            <lightning-input type="url" class='slds-grow' onchange={handleChgUrl} name="url1" value={endpoint} ></lightning-input>
+       </div>
+     
+       <div class="slds-col slds-p-top_large slds-size_0.5-of-3">
+            <lightning-button label="Send" onclick={sendRequest} ></lightning-button>
+       </div>
+      
+        </div>
+        </div>
+        <div class='slds-p-around_medium'>
+            <lightning-input type="text"  label='Username' class='slds-grow' onchange={handlechgUsername} name="username" value={username} ></lightning-input>
+            <lightning-input type="password"   label='password' class='slds-grow' onchange={handlechgpassword} name="password" value={password} ></lightning-input>
+            <lightning-input type="text" label='Consumer Key' class='slds-grow' onchange={handlechgConsumerId} name="consumerkey" value={consumerId} ></lightning-input>
+            <lightning-input type="text"  label='Consumer Secret' class='slds-grow' onchange={handlechgKey} name="consumersecret" value={consumersecret} ></lightning-input>
+            <lightning-input type="url"  label='Redirect  URI' class='slds-grow' onchange={handleChgUrlRedirect} name="redirecturi" value={redirecturi} ></lightning-input>
+
+        </div>
+        <div>
+            {response}
+        </div>
+
+    </lightning-card>
+</template>

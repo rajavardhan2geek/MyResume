@@ -1,0 +1,11 @@
+<aura:component >
+    
+        <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!--body>
+    <p>Hellow </p>
+        </body>
+    <body>
+<c:opportunityLWCCMP/>
+        </body-->
+</aura:component>

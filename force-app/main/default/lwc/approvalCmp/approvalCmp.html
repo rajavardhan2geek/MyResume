@@ -1,0 +1,46 @@
+<template>
+    <div class="slds-card">
+<span class="slds-card__header-title slds-truncate">Items to Approve </span>
+<table class="slds-table slds-table_cell-buffer slds-table_bordered">
+    <thead>
+        <tr class="slds-line-height_reset">
+          <th class="" scope="col">
+            <div class="slds-truncate" title="approve">
+              Approve
+            </div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Name">Reject</div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Email">Reassign</div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="AccountName">Target Object</div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Date of Birth">Status</div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Date of Birth">Current Approver</div>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+            <template for:each={approvalWIList.data} for:item=WIRecord>
+                <tr key={WIRecord.workItemId}>
+                    <td data-key={WIRecord.workItemId}><lightning-button label='Approve'  data-key={WIRecord.workItemId} onclick={approveItem} ></lightning-button></td>
+                    <td><lightning-button label='Reject'  data-key={WIRecord.workItemId} onclick={rejectItem}></lightning-button></td>
+                    <td key={WIRecord.workItemId}><lightning-button label='Reassign'  data-key={WIRecord.workItemId} onclick={reassignItem} ></lightning-button></td>
+
+                    <td data-key={WIRecord.targetObject} onclick={navigatetoURL}><a>{WIRecord.targetObjectName}</a></td>
+                    <td>{WIRecord.status}</td>
+                    <td>{WIRecord.approver}</td>
+                    
+                </tr>
+        
+            </template>
+</tbody>
+</table>
+</div>
+</template>

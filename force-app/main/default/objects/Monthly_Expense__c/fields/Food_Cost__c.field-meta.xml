@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Food_Cost__c</fullName>
+    <externalId>false</externalId>
+    <label>Food Cost</label>
+    <summarizedField>Daily_Expenses__c.Bill_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Daily_Expenses__c.Expense_Type__c</field>
+        <operation>contains</operation>
+        <value>Food</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Daily_Expenses__c.Current_Month__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

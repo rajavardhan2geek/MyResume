@@ -1,0 +1,9 @@
+<aura:component implements='lightning:availableForFlowScreens' controller='accountclsaura'>
+    <aura:attribute name='OpportunityId' type='String' required='true'/>
+    <aura:attribute name='OpportunityLineItemList' type='OpportunityLineItem[]' required='true'  />
+    <p>Lightning Component</p>
+    <aura:iteration items='{!v.OpportunityLineItemList}' var='item'> 
+        <lightning:input type='checkbox'/>
+      Item name is  {!item.Name}    
+    </aura:iteration>
+</aura:component>

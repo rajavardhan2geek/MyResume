@@ -1,0 +1,6 @@
+<aura:component >
+<aura:registerEvent name="captureEvent"   type="c:ComponentEventRootApp" description="capture flow" />
+	<aura:attribute name="parentE" type="String" description="attribute E" />	
+<lightning:button name='buttonE'  label='Component E' onclick='{!c.fireComponentEEvent}' />
+ 
+</aura:component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Batch Controls through Trigger Settings</description>
+    <label>Batch Control</label>
+    <pluralLabel>Batch Controls</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

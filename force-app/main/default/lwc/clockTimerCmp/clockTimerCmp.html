@@ -1,0 +1,21 @@
+<template>
+ <div onclick={changeTime}>
+    <H1>LOCKDOWN PERIOD STARTS <B><br/>
+    <lightning-formatted-date-time value={lockdownstart} year="numeric" month="short" day="2-digit" hour="numeric"
+    weekday="long" time-zone-name="short" hour12="true"  minute="2-digit"></lightning-formatted-date-time>
+        </B></H1><br/>
+    </div>  
+   <!--c-time-counter-display remainingdays={noofdays} remaining-hours={currentHours} remaining-minutes={currentMinutes} remaining-seconds={currentSeconds} remaining-milisec={currentMiliseconds}></c-time-counter-display-->
+  
+   <br/>
+   
+  
+  <c-time-counter-display remainingdays={remainingdays} remaining-hours={remainingHours} 
+  remaining-minutes={remainingMinutes} remaining-seconds={remainingSeconds} 
+  remaining-milisec={remainingMilisec}></c-time-counter-display>
+  
+  <H1>LOCKDOWN PERIOD  ENDS <br/><B> <lightning-formatted-date-time value={lockdownlastdate} year="numeric" month="short" day="2-digit" hour="numeric"
+    weekday="long" time-zone-name="short" hour12="true"  minute="2-digit"></lightning-formatted-date-time>
+   </B> </H1>
+
+</template>

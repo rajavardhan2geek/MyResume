@@ -1,0 +1,10 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId"  >
+<aura:attribute name='recordId' type='Id'/>
+
+<div class='slds-scrollable slds-float_left slds-p-around_none' style='max-width:100%;max-height:100%;'>
+
+ 
+      <c:orderLwcCmp orderId='{!v.recordId}'/>
+ 
+</div>
+</aura:component>

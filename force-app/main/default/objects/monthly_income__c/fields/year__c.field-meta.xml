@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>year__c</fullName>
+    <externalId>false</externalId>
+    <label>year</label>
+    <referenceTo>yearly_income__c</referenceTo>
+    <relationshipLabel>monthly incomes</relationshipLabel>
+    <relationshipName>monthly_incomes</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

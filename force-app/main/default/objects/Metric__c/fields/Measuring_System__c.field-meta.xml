@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Measuring_System__c</fullName>
+    <externalId>false</externalId>
+    <label>Measuring System</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FPS</fullName>
+                <default>false</default>
+                <label>FPS</label>
+            </value>
+            <value>
+                <fullName>CGS</fullName>
+                <default>false</default>
+                <label>CGS</label>
+            </value>
+            <value>
+                <fullName>MKS</fullName>
+                <default>false</default>
+                <label>MKS</label>
+            </value>
+            <value>
+                <fullName>SI</fullName>
+                <default>false</default>
+                <label>SI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

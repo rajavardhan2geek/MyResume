@@ -1,0 +1,50 @@
+<aura:component controller='BotController' implements="flexipage:availableForAllPageTypes" >
+    <aura:attribute name='questions' type='String'/>
+    <aura:attribute name='messages' type='Object[]'/>
+    <aura:attribute name="session" type="Array"/>
+    
+    
+    <div><h1>Chat App
+        </h1>
+        
+        <aura:if isTrue="{!1==2}">
+<p>text</p>
+</aura:if>
+        </div>
+    
+  <div class="slds-grid slds-m-bottom">
+
+    <lightning:layout >
+    		 <lightning:layoutitem >
+                 <h1> User Form </h1>
+              </lightning:layoutitem>
+        	<lightning:layoutitem >
+                <lightning:input type='text' name='input-name' label='Enter name' value='name'/>
+                <lightning:input type='number' name='input-age' label='Enter age' value='20'/>
+                <lightning:button label='Register' name='Register'/>
+              </lightning:layoutitem>
+ 
+      </lightning:layout>
+      
+      
+      <div class='slds-col slds-box slds-p-vertical--x-small'>
+      <aura:iteration items='{!v.messages}' var='msg'>
+		<lightning:layout >
+    		 <lightning:layoutitem padding="around-small">
+   			 
+  			  </lightning:layoutitem>
+  				 <lightning:layoutitem padding="around-small">
+                     <lightning:icon iconName="{#msg.author == 'Raja' ? 'standard:avatar_loading' : 'standard:custom_notification'}" />
+  				     <p><strong>{#msg.author}</strong></p>
+                     <p> {#msg.messageText}	</p>
+                 <aura:iteration items='{#msg.msgs}' var='ma'>     
+                      <p> {#ma}	</p>
+                    </aura:iteration>    
+    			 </lightning:layoutitem>
+            </lightning:layout> 
+         </aura:iteration>
+          
+            </div>     
+      </div>
+   <input type="text" name="input-name" label=" " placeholder="Ask DreamBot..."  onkeypress="{!c.utteranceHandler}"  oncomplete='Typing'/> 
+</aura:component>

@@ -1,0 +1,13 @@
+<template>
+
+
+  <lightning-input type="text" label="Enter some text" value={message} onchange={changeMSG}></lightning-input>
+  <lightning-button
+        variant="brand"
+        label="Publish"
+        title="Send Message"
+        onclick={publishMsg}>
+    </lightning-button>
+
+    {receivedmessage}
+</template>

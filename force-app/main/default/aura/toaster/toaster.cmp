@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <div class="slds-m-around--xx-large slds-text-align--center">
+        <lightning:button label="Fire toast event" onclick="{! c.fireToastEvent }"/>
+    </div>
+</aura:component>

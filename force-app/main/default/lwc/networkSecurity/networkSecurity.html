@@ -1,0 +1,31 @@
+<template>
+
+    <div class="c-container">
+        <lightning-layout>
+            <div class="slds-grid slds-grid_vertical">
+                <div class='slds-col'>
+            <lightning-layout-item padding="around-small">
+         <div class="slds-m-vertical_medium">
+        <h1 class="slds-text-heading_small">Various Textarea Examples</h1>
+        <p class="slds-text-body_regular">The following examples show various ways to create a textarea component.</p>
+    </div>
+    </lightning-layout-item></div>
+    <div class='slds-col'>
+    <lightning-layout-item flexibility="grow">
+        <lightning-input type='text' name="input1" label="Encryption" value={clearText} onchange={handleClearText} ></lightning-input>
+        <lightning-button variant="brand" label="Encrypt" title="Encrypt" onclick={encryptData} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="Decrypt" title="Decrypt" onclick={decryptData} class="slds-m-left_x-small"></lightning-button>
+
+    </lightning-layout-item></div>
+    <div class='slds-col'>
+    <lightning-layout-item flexibility="grow">
+      
+            <lightning-input type='text'  name="input1" label="Decryption" value={cipherText}></lightning-input>
+            
+        </lightning-layout-item>
+    </div>
+</div>
+</lightning-layout>
+</div>
+    
+</template>

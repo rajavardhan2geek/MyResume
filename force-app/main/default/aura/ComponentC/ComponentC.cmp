@@ -1,0 +1,8 @@
+<aura:component >
+<aura:registerEvent name="bubbleEvent" type="c:ComponentEventRootApp" description="propate" />
+<aura:registerEvent name="ApplicationEventBubble" type="c:Applicationevnt" description="propate" />
+	<aura:attribute name="parentC" type="String" description="attribute A" />	
+<lightning:button name='buttonC'  label='Fire Component Event ' onclick='{!c.passmessage}' />
+<lightning:button name='buttonCApp'  label='Fire App Event ' onclick='{!c.passAppEvent}' />
+
+</aura:component>

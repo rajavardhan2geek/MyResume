@@ -1,0 +1,17 @@
+<template>
+
+        <lightning-combobox
+        name="ObjectApiName"
+        label="select Object"
+        value={sobjectsapiname}
+        options={sobjects}
+        onchange={handleChange} ></lightning-combobox>
+
+     
+<div class='fieldlist'>
+
+<template if:true={fieldlist.data}>
+    <c-fields-list-cmp fieldlist={fieldlist.data}></c-fields-list-cmp>
+</template>
+</div>
+</template>
