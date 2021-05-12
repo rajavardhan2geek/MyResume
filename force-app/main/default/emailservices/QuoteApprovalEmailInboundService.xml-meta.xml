@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailServicesFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apexClass>QuoteApprovalEmailInboundService</apexClass>
+    <attachmentOption>None</attachmentOption>
+    <authenticationFailureAction>Discard</authenticationFailureAction>
+    <authorizationFailureAction>Discard</authorizationFailureAction>
+    <emailServicesAddresses>
+        <authorizedSenders>rajavardhan1290@googlemail.com</authorizedSenders>
+        <developerName>pineappleconsulting</developerName>
+        <isActive>true</isActive>
+        <localPart>quoteapprovalemailinboundservice</localPart>
+        <runAsUser>rajavardhan@salesforce.com</runAsUser>
+    </emailServicesAddresses>
+    <functionInactiveAction>Discard</functionInactiveAction>
+    <functionName>QuoteApprovalEmailInboundService</functionName>
+    <isActive>true</isActive>
+    <isAuthenticationRequired>true</isAuthenticationRequired>
+    <isErrorRoutingEnabled>false</isErrorRoutingEnabled>
+    <isTextAttachmentsAsBinary>false</isTextAttachmentsAsBinary>
+    <isTlsRequired>false</isTlsRequired>
+    <overLimitAction>Discard</overLimitAction>
+</EmailServicesFunction>

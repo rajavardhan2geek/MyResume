@@ -1,0 +1,33 @@
+<apex:component access="global"  >
+<!-- Begin Default Content REMOVE THIS -->
+
+Hi Team,<br/>
+<p>
+This is Reminder Email for Latest Status of You and your dependents Health .<br/>
+Please respond, only to me and only if there has been a change status from Previous day /
+TM's who are affected ,Please send us extra details for additional tracking . </p>
+<br/>
+
+<table border='2'>
+    <tr>
+<td><b>Employee Id: </b>DDDDDD</td>
+</tr>
+<tr>
+<td><b>Last Visit to Office:</b>DD/MM/YYYY</td></tr>
+<tr>
+<td><b>Date of COVID Test:</b>DD/MM/YYYY</td></tr>
+<tr>
+<td><b>Date Covid Positive Test Result :</b>DD/MM/YYYY</td>
+</tr>
+<tr>
+<td><b>Date when case was reported  :</b>DD/MM/YYYY</td></tr>
+<tr>
+<td><b>Current Address of Employee :</b>UUUUUUUUUUUUUUUUUUUU</td>
+
+</tr>
+</table>
+
+
+Please reply to Current Mail 
+<!-- End Default Content REMOVE THIS -->
+</apex:component>
