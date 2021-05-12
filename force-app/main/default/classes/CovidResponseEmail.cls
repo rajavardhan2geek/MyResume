@@ -4,7 +4,7 @@ global class CovidResponseEmail implements Messaging.InboundEmailHandler {
                     
       Messaging.InboundEmailResult covidresponseemail = new Messaging.InboundEmailResult();
       String subject= email.subject;
-      String body =email.plainTextBody;
+ 
       String htmlbody =email.htmlBody;
       String fromAddress = email.fromAddress;
       try {
@@ -30,40 +30,17 @@ global class CovidResponseEmail implements Messaging.InboundEmailHandler {
                     }
        }
         
-			 
-     //   List<String> rowList = body.split('\n\n');
-     
-          
-       /*  
-       for(String line:rowList){
-          
-            System.debug('line'+line);
-            
-            
-             covidTest.Contact__c=tmcontact.Id;
-             
-            if(line.contains('Employee Id') ){
-            covidTest.Employee_Id__c=this.matchEmpId(line);}
-             else if(line.contains('Last Visit to Office')){
-               covidTest.Last_Visit_to_Office__c=this.matchDate(line);}
-             else if(line.contains('Date of COVID Test')){
-               covidTest.Covid_Tested_Date__c=this.matchDate(line);}
-             else if(line.contains('Date Covid Positive Test Result')){
-               covidTest.Covid_Positive_Date__c=this.matchDate(line);}
-              else if(line.contains('Date when case was reported')){
-              covidTest.Case_Reported_Date__c=this.matchDate(line);}
-               else if(line.contains('Current Address of Employee')){
-                     covidTest.Current_Address__c=line.substringAfter('Current Address of Employee ');     
-                      }
-                   
-              
-          
-        }*/
         System.debug(covidTest);
-         Database.upsert(covidTest);
+        Database.UpsertResult ur= Database.upsert(covidTest);
+        if(ur.isSuccess()){
         covidresponseemail.success=true;
-        covidresponseemail.message='Created Covid Response for Contact';
-        return null;
+        covidresponseemail.message= 'Success ';
+        return covidresponseemail;}
+        else{
+          covidresponseemail.success=false;
+        covidresponseemail.message= 'Error';
+        return covidresponseemail;
+        }
 
     }
     catch (Exception e) {
