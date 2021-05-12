@@ -10,19 +10,31 @@ global class CovidResponseEmail implements Messaging.InboundEmailHandler {
       try {
         Contact tmcontact=[select Id from Contact where Email =:String.escapeSingleQuotes(fromAddress)];
           Covid_Test__c covidTest=new Covid_Test__c();
-   
+          covidTest.Contact__c=tmcontact.Id;
        List<String> trrows=HTMLParser.scan(htmlbody);
        System.debug('trrows '+trrows);
        for(String trrow:trrows){
-            if()
-
+        System.debug('trrows row '+trrow);
+        if(trrow.contains('Employee Id') ){
+          covidTest.Employee_Id__c=this.matchEmpId(trrow);}
+           else if(trrow.contains('Last Visit to Office')){
+             covidTest.Last_Visit_to_Office__c=this.matchDate(trrow);}
+           else if(trrow.contains('Date of COVID Test')){
+             covidTest.Covid_Tested_Date__c=this.matchDate(trrow);}
+           else if(trrow.contains('Date Covid Positive Test Result')){
+             covidTest.Covid_Positive_Date__c=this.matchDate(trrow);}
+            else if(trrow.contains('Date when case was reported')){
+            covidTest.Case_Reported_Date__c=this.matchDate(trrow);}
+             else if(trrow.contains('Current Address of Employee')){
+                   covidTest.Current_Address__c=trrow.substringAfter('Current Address of Employee ');     
+                    }
        }
-        covidTest.Contact__c=tmcontact.Id;
+        
 			 
-        List<String> rowList = body.split('\n\n');
+     //   List<String> rowList = body.split('\n\n');
      
           
-         
+       /*  
        for(String line:rowList){
           
             System.debug('line'+line);
@@ -46,7 +58,7 @@ global class CovidResponseEmail implements Messaging.InboundEmailHandler {
                    
               
           
-        }
+        }*/
         System.debug(covidTest);
          Database.upsert(covidTest);
         covidresponseemail.success=true;
