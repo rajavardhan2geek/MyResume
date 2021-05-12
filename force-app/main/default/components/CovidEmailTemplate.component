@@ -10,19 +10,19 @@ TM's who are affected ,Please send us extra details for additional tracking . </
 
 <table border='2'>
     <tr>
-<td><b>Employee Id: </b>DDDDDD</td>
+<td><b>Employee Id: </b></td><td>DDDDDD</td>
 </tr>
 <tr>
-<td><b>Last Visit to Office:</b>DD/MM/YYYY</td></tr>
+<td><b>Last Visit to Office:</b></td><td>DD/MM/YYYY</td></tr>
 <tr>
-<td><b>Date of COVID Test:</b>DD/MM/YYYY</td></tr>
+<td><b>Date of COVID Test:</b></td><td>DD/MM/YYYY</td></tr>
 <tr>
-<td><b>Date Covid Positive Test Result :</b>DD/MM/YYYY</td>
+<td><b>Date Covid Positive Test Result :</b></td><td>DD/MM/YYYY</td>
 </tr>
 <tr>
-<td><b>Date when case was reported  :</b>DD/MM/YYYY</td></tr>
+<td><b>Date when case was reported  :</b></td><td>DD/MM/YYYY</td></tr>
 <tr>
-<td><b>Current Address of Employee :</b>UUUUUUUUUUUUUUUUUUUU</td>
+<td><b>Current Address of Employee :</b></td><td>UUUUUUUUUUUUUUUUUUUU</td>
 
 </tr>
 </table>
