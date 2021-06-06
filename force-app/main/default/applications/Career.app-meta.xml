@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Career</label>
+    <navType>Standard</navType>
+    <tabs>Company__c</tabs>
+    <tabs>Reusable_List</tabs>
+    <tabs>webClientTest</tabs>
+    <tabs>Encryption</tabs>
+    <tabs>Subscriber</tabs>
+    <tabs>Covid_Test__c</tabs>
+    <tabs>Orders__x</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Career_UtilityBar</utilityBar>
+</CustomApplication>

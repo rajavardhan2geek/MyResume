@@ -1,0 +1,23 @@
+<template>
+
+
+    <template if:true={headerAttr}>
+
+        <h1>Expenses Form</h1>
+
+    </template>
+
+    <template if:false={headerAttr}>
+    <div class="slds-theme_default">
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+        <lightning-button variant="brand" label="back"  onclick={navigatePrevious} ></lightning-button>
+        </div>
+        <div class="slds-col">
+        <lightning-button variant="brand" label="next"  onclick={navigateNext} ></lightning-button>
+        </div>
+        </div>
+        </div>
+
+    </template>
+</template>

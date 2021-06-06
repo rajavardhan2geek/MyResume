@@ -1,0 +1,6 @@
+<aura:component controller='ExpenseCmpDaoController' implements='flexipage:availableForRecordHome,force:hasRecordId' >
+<aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+<lightning:navigation aura:id='navService'></lightning:navigation>
+<lightning:workspaceAPI aura:id='expenseTab'></lightning:workspaceAPI>
+<lightning:button label='Authenticate Record' onclick="{!c.authenticate}"></lightning:button>
+</aura:component>	

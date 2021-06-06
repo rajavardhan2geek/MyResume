@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Income Tax</label>
+    <tabs>monthly_income__c</tabs>
+    <tabs>yearly_income__c</tabs>
+    <tabs>Subscriber</tabs>
+    <tabs>Covid_Test__c</tabs>
+    <tabs>Orders__x</tabs>
+</CustomApplication>

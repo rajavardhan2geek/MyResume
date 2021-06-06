@@ -1,0 +1,6 @@
+<aura:component implements='force:appHostable' >
+    <aura:handler name="init" value="{!this}" action="{!c.startFlow}"/>
+
+<lightning:flow aura:id='expensesFlow' onstatuschange="{!c.statusChange}"  ></lightning:flow>
+
+</aura:component>	

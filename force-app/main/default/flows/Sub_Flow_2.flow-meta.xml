@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>assign_total_t0_200</name>
+        <label>assign total t0 200</label>
+        <locationX>105</locationX>
+        <locationY>70</locationY>
+        <assignmentItems>
+            <assignToReference>Total</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>200.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>assign_total_to_300</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>assign_total_to_300</name>
+        <label>assign total to 300</label>
+        <locationX>335</locationX>
+        <locationY>77</locationY>
+        <assignmentItems>
+            <assignToReference>Total</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>300.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>get_Opportunti</targetReference>
+        </connector>
+    </assignments>
+    <interviewLabel>Sub Flow 2 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sub Flow 2</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>create_Opportunity</name>
+        <label>create Opportunity</label>
+        <locationX>630</locationX>
+        <locationY>82</locationY>
+        <inputReference>Opportunity</inputReference>
+    </recordCreates>
+    <screens>
+        <name>get_Opportunti</name>
+        <label>get Opportunti</label>
+        <locationX>249</locationX>
+        <locationY>209</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>create_Opportunity</targetReference>
+        </connector>
+        <fields>
+            <name>number_1</name>
+            <dataType>Number</dataType>
+            <fieldText>number 1</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>assign_total_t0_200</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>Opportunity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>Total</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <scale>2</scale>
+        <value>
+            <numberValue>200.0</numberValue>
+        </value>
+    </variables>
+</Flow>
